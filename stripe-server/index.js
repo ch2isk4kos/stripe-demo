@@ -9,3 +9,8 @@ const app = express();
 // MIDDLEWARE
 app.use(express.json());              // passx along json values
 app.use(cors());                      // cross origin resource sharing
+
+// ROUTES
+app.get("/", (req, res) => {
+  res.send("Microphone Check.")
+})
