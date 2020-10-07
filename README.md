@@ -1,1 +1,1 @@
-# stripe-demo
+# Stripe Demo
