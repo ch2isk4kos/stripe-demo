@@ -12,7 +12,11 @@ function App() {
 
   handlePayment = token => {
     // request body
-    const body = {token, product};
+    const body = { token, product };
+    // headers
+    const headers = {
+      "Content-Type": "application/json",
+    };
   }
   
   return (
