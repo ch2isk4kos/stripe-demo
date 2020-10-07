@@ -14,11 +14,11 @@ app.use(cors());                                // cross origin resource sharing
 // ROUTES
 app.get("/", (req, res) => {
   res.send("Microphone Check.")
-})
+});
 
 app.post("/payment", (req, res) => {
-  const { product, token } = req.body; // destructure a product and a token from client
-  const idempontencyKey = uuid(); // assigns a unique key that will prevent user from being charged more than once.
+  const { product, token } = req.body;          // destructure a product and a token from client
+  const idempontencyKey = uuid();               // assigns a unique key that will prevent user from being charged more than once.
 
   // log
   console.log("product: ", product);
@@ -50,7 +50,7 @@ app.post("/payment", (req, res) => {
     })
     .then((data) => res.status(200).json(data))
     .catch((err) => console.log(err));
-})
+});
 
 // SERVER
 app.listen(PORT, () => console.log(`Listening on localhost:${PORT}`));
