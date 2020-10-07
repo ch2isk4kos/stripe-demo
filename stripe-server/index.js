@@ -1,9 +1,10 @@
-const cors = require("cors");
-const express = require("express");
-const uuid = require("uuid");
-const KEY = require("dotenv").config();
-// const stripe = require("stripe")(""); // @TODO: add a stripe key
+require("dotenv").config();
+const stripe = require("stripe")(process.env.REACT_APP_KEY);
 
+const cors = require("cors");
+const uuid = require("uuid");
+
+const express = require("express");
 const app = express();
 
 // MIDDLEWARE
