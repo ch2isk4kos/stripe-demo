@@ -14,3 +14,6 @@ app.use(cors());                      // cross origin resource sharing
 app.get("/", (req, res) => {
   res.send("Microphone Check.")
 })
+
+// SERVER
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
