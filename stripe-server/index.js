@@ -5,3 +5,7 @@ const uuid = require("uuid/v4");
 const PORT = 3000;
 
 const app = express();
+
+// MIDDLEWARE
+app.use(express.json());              // passx along json values
+app.use(cors());                      // cross origin resource sharing
