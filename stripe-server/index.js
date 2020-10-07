@@ -1,5 +1,6 @@
 require("dotenv").config();
 const stripe = require("stripe")(process.env.REACT_APP_KEY);
+const PORT = process.env.PORT;
 
 const cors = require("cors");
 const uuid = require("uuid");
