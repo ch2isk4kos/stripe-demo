@@ -9,6 +9,11 @@ function App() {
     price: 35,
     company: "Indie Brand"
   });
+
+  handlePayment = token => {
+    // request body
+    const body = {token, product};
+  }
   
   return (
     <div className="App">
@@ -19,7 +24,9 @@ function App() {
           stripeKey={process.env.REACT_APP_KEY} 
           token={handlePayment} 
           name={product.name}
-          amount={product.price * 100} />          
+          amount={product.price * 100}
+          shippingAddress={""}
+          billingAddress={""} />          
       </header>
     </div>
   );
