@@ -1,9 +1,8 @@
 const cors = require("cors");
 const express = require("express");
-const { default: Stripe } = require("stripe");
-//const stripe = require("stripe")(""); // @TODO: add a stripe key
 const uuid = require("uuid");
-const PORT = 3000;
+const KEY = require("dotenv").config();
+// const stripe = require("stripe")(""); // @TODO: add a stripe key
 
 const app = express();
 
