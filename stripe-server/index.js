@@ -17,8 +17,12 @@ app.get("/", (req, res) => {
 })
 
 app.post("/payment", (req, res) => {
-  const { product, token } = req.body;          // destructure a product and a token from client
-  const idempontencyKey = uuid();               // assigns a unique key that will prevent user from being charged more than once.
+  const { product, token } = req.body; // destructure a product and a token from client
+  const idempontencyKey = uuid(); // assigns a unique key that will prevent user from being charged more than once.
+
+  // log
+  console.log("product: ", product);
+  console.log("price: $", product.price);
 })
 
 // SERVER
