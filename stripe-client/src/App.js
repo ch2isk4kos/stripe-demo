@@ -17,6 +17,20 @@ function App() {
     const headers = {
       "Content-Type": "application/json",
     };
+
+    return fetch(`http://localhost:3000/payment`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body),
+    })
+    .then((res) => {
+      console.log("RESPONSE: ", res);
+      const { status } = res;
+      console.log("STATUS: ", status);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   }
   
   return (
